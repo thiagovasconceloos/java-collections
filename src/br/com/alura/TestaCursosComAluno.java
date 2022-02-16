@@ -26,7 +26,7 @@ public class TestaCursosComAluno {
 				javaColecoes.matricula(a3);
 				
 				
-				javaColecoes.getAlunos().forEach(aluno -> System.out.println(aluno.getNome()));
+				javaColecoes.getAlunos().forEach(aluno -> System.out.println(aluno));
 		
 		
 	}

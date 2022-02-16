@@ -18,6 +18,11 @@ public class Aluno {
 	public int getId() {
 		return id;
 	}
+
+	@Override
+	public String toString() {
+		return "Nome do aluno: " + nome + ", matricula: " + id + "";
+	}
 	
 	
 	
