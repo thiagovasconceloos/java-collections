@@ -1,50 +1,41 @@
 package br.com.alura;
 
 public class Aluno {
-	
+
 	private String nome;
-	private int id;
-	
-	public Aluno(String nome, int id) {
-		if(nome == null) {
-			
-			 throw new NullPointerException("Nome não pode ser nulo");
-			 
+	private int numeroMatricula;
+
+	public Aluno(String nome, int numeroMatricula) {
+		if (nome == null) {
+			throw new NullPointerException("Nome não pode ser nulo");
 		}
 		this.nome = nome;
-		this.id = id;
+		this.numeroMatricula = numeroMatricula;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public int getId() {
-		return id;
-	}
-	
-	
-	@Override
-	public boolean equals(Object obj) {
-		Aluno outro = (Aluno) obj;
-		
-		return this.nome.equals(outro.nome);
+	public int getNumeroMatricula() {
+		return numeroMatricula;
 	}
 
-	@Override
-	public int hashCode() {
-		
-		return this.nome.charAt(0);
-	}
-	
-	
 	@Override
 	public String toString() {
-		return "Nome do aluno: " + nome + ", matricula: " + id + "";
+		return "Nome do aluno: " + this.nome + ", matricula: " + this.numeroMatricula
+				+ "";
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Aluno outroAluno = (Aluno) obj;
+		return this.nome.equals(outroAluno.nome);
 	}
 	
+	@Override
+	public int hashCode() {
+		return this.nome.hashCode();
+	}
 	
-	
-	
-
 }
